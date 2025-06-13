@@ -1,0 +1,14 @@
+ SDTrimSP-Ar-(Si+Ta)-1keV-Janez                                                  
+time for proj     :       5.66  s       4.3  %
+time for recoil   :     122.12  s      93.3  %
+time for gsum/hist:       0.02  s       0.0  %
+time for part/hist:       3.09  s       2.4  %
+time for diff/hist:       0.00  s       0.0  %
+time for out/hist :       0.01  s       0.0  %
+time for out/hist :       0.04  s       0.0  %
+  time for history:       0.01  s       0.0  %
+time for gsum/SDTr:       0.00  s
+time for SDTrimSP :     130.96  s
+time for SDTrimSP :       2.18 min
+time for SDTrimSP :       0.04  h
+number of PEs:    1 NH=      1000 NR= 100 NH*NR=         100000

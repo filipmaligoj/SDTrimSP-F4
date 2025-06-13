@@ -1,0 +1,216 @@
+ SDTrimSP: VERSION 6.03    13.06.2025
+ Static and dynamic simulation of ion-solid interaction
+ based on TRIM.SP and TRIDYN  
+ W.Eckstein and R.Dohmen, 2002, version 4.01, target one dimensional
+ last edition   A.Mutzke, 2019, version 6.03, target one dimensional
+
+ SDTrimSP-Ar-(Si+Ta)-1keV-Janez                                                  
+
+ ------------------------------
+ INPUT DATA:  DYNAMIC CASE
+
+ CPT  SYMBOL A-Z  A-MASS        DNS0         RHO
+  1   Ar     18  39.9480     0.02080     1.38000
+  2   Si     14  28.0855     0.04994     2.32900
+  3   Ta     73 180.9479     0.05543    16.65400
+
+ CPT         Q-0      Q-BEAM       Q-MAX      CHARGE
+  1       0.0000      1.0000      1.0000      0.0000
+  2       0.0000      0.0000      1.0000      0.0000
+  3       0.0000      0.0000      1.0000      0.0000
+
+ CPT          E0      AlPHA0       INEL0
+  1    1000.0000     45.0000         3
+  2       0.0000      0.0000         3
+  3       0.0000      0.0000         3
+
+ CPT    E_CUTOFF     E_DISPL     E_BULKB     E_SURFB          X0    deltaH_d
+  1       0.1000      5.0000      0.0000      0.0000      0.0000
+  2       1.5000     13.0000      0.0000      4.7200      0.0000
+  3       3.0000     32.0000      0.0000      8.1000      0.0000
+
+          FLUENZ          TT       TTDYN         DSF       TTEMP
+      1.0000E+00  1.9698E+03  8.0000E+01  5.0000E+00  3.0000E+02
+
+        NH  NR-PPROJ       NCP     IDREL      SFIN      IPOT      ISBV
+    1000       100         3         0         0         1         1
+
+       IQ0      IRC0     IRAND    IPIVOT       IWC      IWCR  INTEGRAL
+      -1        -1         1         8         2         2         2
+
+     IDOUT       NQX   L_THICK
+      10        40         0
+LPART_R_ED LTERM_DIF
+       T         F
+ 
+ random: no other option is used, standard random (CRAY)
+
+
+ INTERACTION POTENTIAL (ipot): KR-C POTENTIAL    
+
+ INELASTIC LOSS MODEL FOR COMPONENT= 1: 50% LS 50% OR (default:inel=3)
+ INELASTIC LOSS MODEL FOR COMPONENT= 2: 50% LS 50% OR (default:inel=3)
+ INELASTIC LOSS MODEL FOR COMPONENT= 3: 50% LS 50% OR (default:inel=3)
+
+
+
+ INHOMOGENEOUS INITIAL COMPOSITION:
+
+  COMPONENT #2:
+  1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+  0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+
+
+  COMPONENT #3:
+  0.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+  1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+
+
+
+
+  I   A(I,J)  KL(I,J)   KOR(I,J) MTRF(I,J) SBV(I,J)  CA      CK    eps/E(I,J)
+
+  1   0.1126   1.9756   1.9298   1.0000   0.0000   1.0000   1.0000 0.1207E-04
+      0.1173   1.7332   1.5611   0.9696   0.0000   1.0000   1.0000 0.1334E-04
+      0.0857   3.3979   5.7344   0.5926   0.0000   1.0000   1.0000 0.3709E-05
+  2   0.1173   1.9822   1.7854   0.9696   0.0000   1.0000   1.0000 0.1898E-04
+      0.1225   1.7574   1.4519   1.0000   4.7200   1.0000   1.0000 0.2169E-04
+      0.0880   3.2313   5.1703   0.4652   0.0000   1.0000   1.0000 0.5176E-05
+  3   0.0857   2.0162   3.4025   0.5926   0.0000   1.0000   1.0000 0.8189E-06
+      0.0880   1.6764   2.6823   0.4652   0.0000   1.0000   1.0000 0.8034E-06
+      0.0706   4.7540  11.8100   1.0000   8.1000   1.0000   1.0000 0.4601E-06
+
+ENERGY INPUT:
+     constant energy e0 (1)=     1000.00000 eV
+
+ ------------------------------
+ OUTPUT DATA:
+
+ INTEGRAL QUANTITIES (NOT FLUENCE DEPENDENT)
+ KNOCK-ON ATOMS
+  prim. KA =     14731  sec.KA =    223955  tot. KA =    238686   chamax =  0.00594
+
+  KNOCK-ON ATOMS:  generation number
+                      1         14731
+                      2         36913
+                      3         51690
+                      4         49833
+                      5         37336
+                      6         23539
+                      7         13095
+                      8          6580
+                      9          3009
+                     10          1249
+                     11           473
+                     12           164
+                     13            54
+                     14            15
+                     15             4
+                     16             1
+                 2 - 16        223955
+                 1 - 16        238686
+  
+ KNOCK-ON ATOMS (>ED)
+  prim. KA(>ED) =      7044  sec.KA(>ED) =     19829  tot. KA(>ED) =     26873
+
+  KNOCK-ON ATOMS(>ED):generation   number
+                      1          7044
+                      2          9325
+                      3          6286
+                      4          2849
+                      5           993
+                      6           286
+                      7            72
+                      8            15
+                      9             3
+                 2 -  9         19829
+                 1 -  9         26873
+
+
+ FINAL DEPOSITED DEPTH =   30.150 A   (decrease)
+
+
+ AREAL DENSITIES AND FLUENCES ( A**(-2) ) 
+    fluence:  1.0000E+00 chamax:0.0594
+ cpt    incident   reflected   reemitted   sputtered   deposited
+  1   1.0000E+00  2.4323E-01  0.0000E+00  6.0277E-01  1.5400E-01
+  2   0.0000E+00  0.0000E+00  0.0000E+00  1.3912E+00  1.1058E+00
+  3   0.0000E+00  0.0000E+00  0.0000E+00  5.3746E-01  1.0755E+02
+
+ ENERGY LOSSES (PROJECTILES: implanted + backscattered + transmitted)
+
+  cpt. nuclear loss     electr.loss  nuc.loss(>e_d)  nuc.loss(<e_d)
+   1     8.43712E+05    7.95349E+04    7.64139E+05    6.85063E+04
+
+ ENERGY LOSSES (RECOILS: stopped + back_sputtered + transm_sputtered)
+
+  cpt. nuclear loss     electr.loss  nuc.loss(>e_d)  nuc.loss(<e_d)
+   1     1.03154E+05    7.30052E+03    3.41720E+04    5.17231E+04
+   2     1.33615E+06    8.91606E+04    4.74553E+05    6.57745E+05
+   3     7.32797E+05    4.87168E+04    2.23566E+05    3.91685E+05
+
+
+ STATISITICS ABOUT IMPL., BACKSC., TRANSM, AND SPUTTERED ATOMS
+
+
+                 PROJECTILES(1)=        1000     ENERGY=1.0000E+06 EV
+
+       IMPLANTED PROJECTILES(1)=         757     ENERGY=3.2712E+00 EV
+      REEMISSION PROJECTILES(1)=         0
+   BACKSCATTERED PROJECTILES(1)=         243     ENERGY=7.6750E+04 EV
+     TRANSMITTED PROJECTILES(1)=           0     ENERGY=0.0000E+00 EV
+
+
+              GENERATED RECOILS=    238686     GEN. REC.(>ED)=     26873
+
+   STOPPED GENERATED RECOILS(1)=       14073     ENERGY=6.4799E+01 EV
+   STOPPED GENERATED RECOILS(2)=      166928     ENERGY=4.3974E+04 EV
+   STOPPED GENERATED RECOILS(3)=       55162     ENERGY=4.6430E+04 EV
+  ALL STOPP. GENERATED RECOILS =      236164     ENERGY=9.0469E+04 EV
+
+        REEMISSION PARTICLES(2)=         0
+        REEMISSION PARTICLES(3)=         0
+
+   BACKW. SPUTTER.  RECOILS(1) =         603     ENERGY=5.8994E+03 EV
+   BACKW. SPUTTER.  RECOILS(2) =        1391     ENERGY=5.1362E+04 EV
+   BACKW. SPUTTER.  RECOILS(3) =         537     ENERGY=1.9255E+04 EV
+  ALL BACKW. SPUTTER.  RECOILS =        2531     ENERGY=7.6517E+04 EV
+   BACKW. SPUTTER.REC.(>ED)(1) =       365
+   BACKW. SPUTTER.REC.(>ED)(2) =       345
+   BACKW. SPUTTER.REC.(>ED)(3) =       209
+  ALL BACKW. SPUTTER.REC.(>ED) =       918
+
+   TRANSM. SPUTTER.  RECOILS(1)=           0     ENERGY=0.0000E+00 EV
+   TRANSM. SPUTTER.  RECOILS(2)=           0     ENERGY=0.0000E+00 EV
+   TRANSM. SPUTTER.  RECOILS(3)=           0     ENERGY=0.0000E+00 EV
+  ALL TRANSM. SPUTTER.  RECOILS=           0     ENERGY=0.0000E+00 EV
+
+ BACK.SPUTTERED PARTIC.(1 BY 1)=         109     ENERGY=3.4377E+03 EV
+ BACK.SPUTTERED PARTIC.(1 BY 2)=         326     ENERGY=1.6446E+03 EV
+ BACK.SPUTTERED PARTIC.(1 BY 3)=         168     ENERGY=8.1707E+02 EV
+ BACK.SPUTTERED PARTIC.(2 BY 1)=         511     ENERGY=3.4619E+04 EV
+ BACK.SPUTTERED PARTIC.(2 BY 2)=         714     ENERGY=1.4508E+04 EV
+ BACK.SPUTTERED PARTIC.(2 BY 3)=         166     ENERGY=2.2351E+03 EV
+ BACK.SPUTTERED PARTIC.(3 BY 1)=         210     ENERGY=1.1359E+04 EV
+ BACK.SPUTTERED PARTIC.(3 BY 2)=          67     ENERGY=1.4734E+03 EV
+ BACK.SPUTTERED PARTIC.(3 BY 3)=         260     ENERGY=6.4221E+03 EV
+
+         ION IN , PRIMARY KO(1)=          47     ENERGY=2.1104E+03 EV
+         ION IN , SECOND. KO(1)=         417     ENERGY=2.0645E+03 EV
+         ION OUT, PRIMARY KO(1)=          23     ENERGY=1.1517E+03 EV
+         ION OUT, SECOND. KO(1)=         115     ENERGY=5.7276E+02 EV
+
+         ION IN , PRIMARY KO(2)=         316     ENERGY=2.3781E+04 EV
+         ION IN , SECOND. KO(2)=         767     ENERGY=1.5066E+04 EV
+         ION OUT, PRIMARY KO(2)=         145     ENERGY=9.7386E+03 EV
+         ION OUT, SECOND. KO(2)=         164     ENERGY=2.7767E+03 EV
+
+         ION IN , PRIMARY KO(3)=         101     ENERGY=5.3563E+03 EV
+         ION IN , SECOND. KO(3)=         243     ENERGY=5.8492E+03 EV
+         ION OUT, PRIMARY KO(3)=          98     ENERGY=5.7131E+03 EV
+         ION OUT, SECOND. KO(3)=          96     ENERGY=2.3363E+03 EV
+
+       ION IN , PRIMARY KO(ALL)=         463     ENERGY=3.1248E+04 EV
+       ION IN , SECOND. KO(ALL)=        1426     ENERGY=2.2979E+04 EV
+      ION OUT , PRIMARY KO(ALL)=         264     ENERGY=1.6603E+04 EV
+      ION OUT , SECOND. KO(ALL)=         373     ENERGY=5.6858E+03 EV
