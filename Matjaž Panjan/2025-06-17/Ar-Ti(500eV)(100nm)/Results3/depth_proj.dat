@@ -1,0 +1,9 @@
+ SDTrimSP: VERSION 6.03    17.06.2025
+SDTrimSP-Ar-Ti -Panjan-ver3                                                     
+           1       number species of projectiles
+ DEPTH DISTRIBUTIONS (PROJECTILES), COMPONENT(1): Ar   
+           1        100000.     50.000          number of depth ,nproj,e_tot [MeV]
+         [A]    [number]    [number]       [MeV]       [MeV]       [MeV]       [MeV]    [number]    [number]    [number]
+DEPTH/LENGTH       STOPS  PATHLENGTH   NUCL.LOSS  ELECT.LOSS NUC.LOSS<ED NUC.LOSS>ED  FRENKEL P.  NUM.COLL.      NRT-DPA
+  5.0000E+02  9.4448E+04  9.4448E+04  4.6890E+01  2.9843E+00  4.3524E+00  4.1120E+01  8.4828E+05  0.0000E+00  7.5129E+05
+  0.0000E+00  9.4448E+04  9.4448E+04  4.6890E+01  2.9843E+00  4.3524E+00  4.1120E+01  8.4828E+05  0.0000E+00  7.5129E+05

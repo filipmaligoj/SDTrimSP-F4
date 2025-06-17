@@ -1,0 +1,14 @@
+ SDTrimSP-Ar-Ti -Panjan-ver3                                                     
+time for proj     :       3.06  s       6.6  %
+time for recoil   :      41.87  s      91.1  %
+time for gsum/hist:       0.00  s       0.0  %
+time for part/hist:       1.04  s       2.3  %
+time for diff/hist:       0.00  s       0.0  %
+time for out/hist :       0.00  s       0.0  %
+time for out/hist :       0.00  s       0.0  %
+  time for history:       0.01  s       0.0  %
+time for gsum/SDTr:       0.00  s
+time for SDTrimSP :      46.29  s
+time for SDTrimSP :       0.77 min
+time for SDTrimSP :       0.01  h
+number of PEs:    1 NH=      1000 NR= 100 NH*NR=         100000

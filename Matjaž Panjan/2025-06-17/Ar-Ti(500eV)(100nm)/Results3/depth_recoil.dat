@@ -1,0 +1,33 @@
+ SDTrimSP: VERSION 6.03    17.06.2025
+SDTrimSP-Ar-Ti -Panjan-ver3                                                     
+           2    number species of recoils
+ DEPTH DISTRIBUTIONS (RECOILS), COMPONENT(1): Ar   
+           1        100000.     50.000        number of depth ,NH*NR, e_tot_p[MeV]
+         [A]    [number]    [number]       [MeV]       [MeV]       [MeV]       [MeV]    [number]
+DEPTH/LENGTH       STOPS  PATHLENGTH   NUCL.LOSS  ELECT.LOSS NUC.LOSS<ED NUC.LOSS>ED   VACANCIES   DISPLCNTR REPLACEMENT
+  5.0000E+02  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+sum(STOPS)                  0.0
+sum(VACANCIES)              0.0
+sum(DISPLCNTR)              0.0
+sum(REPLACEMENT)            0.0
+ DEPTH DISTRIBUTIONS (RECOILS), COMPONENT(2): Ti   
+           1        100000.     50.000        number of depth ,NH*NR, e_tot_p[MeV]
+         [A]    [number]    [number]       [MeV]       [MeV]       [MeV]       [MeV]    [number]
+DEPTH/LENGTH       STOPS  PATHLENGTH   NUCL.LOSS  ELECT.LOSS NUC.LOSS<ED NUC.LOSS>ED   VACANCIES   DISPLCNTR REPLACEMENT
+  5.0000E+02  1.0070E+07  1.0070E+07  1.3643E+02  5.9346E+00  6.8734E+01  4.4422E+01  1.0158E+07  1.5324E+06  8.5907E+06
+  0.0000E+00  1.0070E+07  1.0070E+07  1.3643E+02  5.9346E+00  6.8734E+01  4.4422E+01  1.0158E+07  1.5324E+06  8.5907E+06
+sum(STOPS)           10069908.0
+sum(VACANCIES)       10158230.0
+sum(DISPLCNTR)        1532361.0
+sum(REPLACEMENT)      8590666.0
+
+sum(STOPS)..stop all generated not sputtered recoils                      = sum(VACANCIES)-BACKW._SPUTTER.REC              
+sum(VACANCIES)..damage all generated recoils                              = sum(STOPS)    +BACKW._SPUTTER.REC              
+sum(DISPLCNTR)..damage generated recoil (E>Ed) + sputtered recoils (E<Ed) = sum(VACANCIES)-sum(REPLACEMENT)-BSR+BSREC.(>ED)
+sum(REPLACEMENT)..replaced generated recoil (E<Ed)                       
+   BACKW._SPUTTER.REC.(>ED) ...BSR(>ED) (see output.dat)                 
+   BACKW._SPUTTER.REC       ...BSR      (see output.dat)                 
+
+   Brutto damage ... VACANCIES                                           
+        Netto  damage ... STOPS - VACANCIES                              
